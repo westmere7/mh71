@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH71 | Thanh toán</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="logo" style="text-align: center; margin-top: 50px; margin-bottom: 10px;">
+        <img src="https://i.postimg.cc/pTNwKDxM/MH71-logo.png" alt="Logo" width="130">
+    </div>
+    <div class="content">
+        <h1>Thông tin thanh toán</h1>
+
+        <input type="text" id="phone-number" placeholder="Nhập sdt đã kết nối Zalo">
+        <button id="submit-btn" disabled="">Tra cứu</button>
+
+        <div id="result"></div>
+
+        <div id="total-box"></div>
+
+        <div id="breakdown"></div>
+
+        <div id="transaction-info">
+            <div style="margin-top: 20px;"></div>
+
+            <h2>Thông tin chuyển khoản</h2>
+
+            <p>Ngân hàng BIDV CHI NHÁNH BẮC SÀI GÒN</p>
+
+            <p>NGUYEN BAC KINH</p>
+            <div id="account-info">
+                <p id="account-number">31310000907350</p>
+                <button id="copy-btn">Copy stk</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="footer">
+        Nhà trọ MH71 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
+    </footer>
+
+    <script src="script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
