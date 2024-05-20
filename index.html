@@ -95,11 +95,47 @@ button:disabled {
 }
 
 .info-box {
-    //border: 1px solid #ccc; /* Add a border around the box */
-    padding: 20px; /* Add padding inside the box */
-    border-radius: 15px; /* Add rounded corners to the box */
-    background-color: #ffffff; /* Set background color for the box */
-    width: 400px; /* Set the width of the box */
+    ///border: 2px solid #349ca4;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 300px;
+}
+
+.image-container {
+    margin: 5px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    //border: 2px solid #349ca4;
+    border-radius: 5px;
+   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.bank-details {
+    font-weight: bold;
+    color: #349ca4;
+}
+
+.account-holder {
+    font-style: italic;
+    color: #349ca4;
+}
+
+#account-number {
+    font-size: 16px;
+    color: #349ca4;
+}
+
+#copy-btn {
+    background-color: #349ca4;
+    color: #fff;
+    padding: 7px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
 }
 
 #breakdown {
@@ -206,14 +242,12 @@ footer {
 <div id="total-box"></div>
 <div id="breakdown"></div>
 <div id="transaction-info">
-<div style="margin-top: 00px;"></div>
+<div style="margin-top: 0px;"></div>
 <div class="info-box">
-    <h2>Thông tin chuyển khoản</h2>
-    <p>Ngân hàng BIDV CHI NHÁNH BẮC SÀI GÒN</p>
-    <p>NGUYEN BAC KINH</p>
-    <div id="account-info">
-        <p id="account-number">31310000907350</p>
-        <button id="copy-btn">Copy stk</button>
+    <div class="image-container">
+        <img src="https://i.postimg.cc/8Cc2JXcs/qr.png" alt="Thông tin chuyển khoản">
+    </div>
+    <button id="copy-btn">Copy stk</button>
 </div>
 </div>
 </div>
@@ -357,8 +391,8 @@ V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
 
 // Copy account number to clipboard
 document.getElementById('copy-btn').addEventListener('click', () => {
-    const accountNumber = document.getElementById('account-number').textContent;
-    navigator.clipboard.writeText(accountNumber).then(() => {
+    ///const accountNumber = document.getElementById('account-number').textContent;
+    navigator.clipboard.writeText('31310000907350').then(() => {
         const copyBtn = document.getElementById('copy-btn');
         copyBtn.textContent = 'Đã copy STK';
         copyBtn.style.backgroundColor = '#28a745'; // Change button color to green
