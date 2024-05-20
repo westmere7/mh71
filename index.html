@@ -28,11 +28,17 @@ h1 {
 }
 
 input[type="text"] {
-    width: 300px;
+        width: 300px;
+    height: 50px;
     padding: 10px;
-    font-size: rem;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+        font-weight: bold; /* Set the font weight to bold */
+        color: #333333;
+
+    //text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 9px;
     margin-bottom: 20px;
 }
 
@@ -41,11 +47,23 @@ button {
     padding: 10px;
     font-size: 1rem;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     background-color: #349ca4;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+button:hover {
+    background-color: #277c84; /* Darken the color on hover */
+    transform: translateY(-2px); /* Add a subtle lift effect on hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Add a press effect when clicked */
 }
 
 button:disabled {
@@ -60,13 +78,18 @@ button:disabled {
 }
 
 #total-box {
-    margin-top: 20px;
-    padding: 30px; /* Increase padding for more space */
-    font-size: 2.7rem; /* Increase font size for larger text */
+        font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    color: #fff;
-    background-color: #28a745;
-    border-radius: 15px; /* Round the corners of the box */
+    margin-top: 20px;
+    width: 50%;
+    //padding: 30px; /* Increase padding for more space */
+    font-size: 3rem; /* Increase font size for larger text */
+    font-weight: bold;
+    
+    border: 10px solid #349ca4;
+    color: #ffffff;
+    background-color: #349ca4;
+    border-radius: 10px; /* Round the corners of the box */
     display: none;
 }
 
@@ -76,11 +99,11 @@ button:disabled {
     padding-bottom: 20px;
      padding-right: 30px;
     padding-left: 30px;
-    font-size: 1rem;
+    font-size: .85rem;
     color: #333;
     background-color: #fff;
     border: 0px solid #ccc;
-    border-radius: 15px;
+    border-radius: 10px;
     display: none;
     word-wrap: break-word; /* Add this line to enable word wrapping */
     width: 50%; /* Set the width to 80% or adjust as needed */
@@ -143,7 +166,21 @@ footer {
 
 .flash {
     animation: flash 0.3s;
-}</style>
+}
+
+        /* CSS to style the placeholder text */
+        #phone-number::placeholder {
+            
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 15px; /* Set the font size of the placeholder text */
+        padding: 7px;
+        color: #999; /* Set the color of the placeholder text */
+        //font-family: 'Open Sans', sans-serif;
+        //font-weight: regular;
+        }
+
+</style>
 
 
     <meta charset="UTF-8">
