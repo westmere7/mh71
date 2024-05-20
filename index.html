@@ -28,15 +28,16 @@ h1 {
 }
 
 input[type="text"] {
-        width: 300px;
+    width: 300px;
     height: 50px;
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: 'Open Sans', sans-serif;
         font-weight: bold; /* Set the font weight to bold */
         color: #333333;
 
-    //text-align: center;
+    text-align: center;
+    
     border: 1px solid #ccc;
     border-radius: 9px;
     margin-bottom: 20px;
@@ -171,61 +172,46 @@ footer {
         /* CSS to style the placeholder text */
         #phone-number::placeholder {
             
-        font-family: 'Open Sans', sans-serif;
-        font-weight: bold;
-        font-size: 15px; /* Set the font size of the placeholder text */
-        padding: 7px;
+        //font-family: 'Open Sans', sans-serif;
+       // font-weight: bold;
+        font-size: 1rem; /* Set the font size of the placeholder text */
+        padding: 10px;
         color: #999; /* Set the color of the placeholder text */
         //font-family: 'Open Sans', sans-serif;
         //font-weight: regular;
         }
 
 </style>
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MH71 | Thanh toán</title>
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MH71 | Thanh toán</title>
 </head>
 <body>
-    <div class="logo" style="text-align: center; margin-top: 100px; margin-bottom: 00px;">
-    <img src="https://i.postimg.cc/4yTC7qfz/Asset-12.png" alt="Logo" width="300">
+<div class="logo" style="text-align: center; margin-top: 100px; margin-bottom: 00px;">
+<img src="https://i.postimg.cc/4yTC7qfz/Asset-12.png" alt="Logo" width="300">
 </div>
-    <div class="content" style="text-align: center; margin-top: 00px; margin-bottom: 10px;">
-        <h1>Thông tin thanh toán</h1>
-
-        <input type="text" id="phone-number" placeholder="Nhập sdt đã kết nối Zalo">
-        <button id="submit-btn" disabled="">Tra cứu</button>
-
-        <div id="result"></div>
-
-        <div id="total-box"></div>
-
-        <div id="breakdown"></div>
-
-        <div id="transaction-info">
-            <div style="margin-top: 20px;"></div>
-
-            <h2>Thông tin chuyển khoản</h2>
-
-            <p>Ngân hàng BIDV CHI NHÁNH BẮC SÀI GÒN</p>
-
-            <p>NGUYEN BAC KINH</p>
-            <div id="account-info">
-                <p id="account-number">31310000907350</p>
-                <button id="copy-btn">Copy stk</button>
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-        V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
-    </footer>
-
-    <script src="script.js"></script>
-
+<div class="content" style="text-align: center; margin-top: 00px; margin-bottom: 10px;">
+<h1>Thông tin thanh toán</h1>
+<input type="text" id="phone-number" placeholder="Nhập sdt đã kết nối Zalo">
+<button id="submit-btn" disabled>Tra cứu</button>
+<div id="result"></div>
+<div id="total-box"></div>
+<div id="breakdown"></div>
+<div id="transaction-info">
+<div style="margin-top: 20px;"></div>
+<h2>Thông tin chuyển khoản</h2>
+<p>Ngân hàng BIDV CHI NHÁNH BẮC SÀI GÒN</p>
+<p>NGUYEN BAC KINH</p>
+<div id="account-info">
+<p id="account-number">31310000907350</p>
+<button id="copy-btn">Copy stk</button>
+</div>
+</div>
+</div>
+<footer>
+V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
+</footer>
+<script src="script.js"></script>
 <script>fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
     .then(response => response.text())
     .then(data => {
@@ -370,5 +356,4 @@ document.getElementById('copy-btn').addEventListener('click', () => {
     }).catch(err => {
         console.error('Không thể copy:', err);
     });
-});</script><script type="text/javascript" src="js/script.js"></script>
-</body>
+});</script></body>
