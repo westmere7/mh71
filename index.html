@@ -94,6 +94,14 @@ button:disabled {
     display: none;
 }
 
+.info-box {
+    //border: 1px solid #ccc; /* Add a border around the box */
+    padding: 20px; /* Add padding inside the box */
+    border-radius: 15px; /* Add rounded corners to the box */
+    background-color: #ffffff; /* Set background color for the box */
+    width: 400px; /* Set the width of the box */
+}
+
 #breakdown {
     margin-top: 70px;
      padding-top: 20px;
@@ -198,13 +206,14 @@ footer {
 <div id="total-box"></div>
 <div id="breakdown"></div>
 <div id="transaction-info">
-<div style="margin-top: 20px;"></div>
-<h2>Thông tin chuyển khoản</h2>
-<p>Ngân hàng BIDV CHI NHÁNH BẮC SÀI GÒN</p>
-<p>NGUYEN BAC KINH</p>
-<div id="account-info">
-<p id="account-number">31310000907350</p>
-<button id="copy-btn">Copy stk</button>
+<div style="margin-top: 00px;"></div>
+<div class="info-box">
+    <h2>Thông tin chuyển khoản</h2>
+    <p>Ngân hàng BIDV CHI NHÁNH BẮC SÀI GÒN</p>
+    <p>NGUYEN BAC KINH</p>
+    <div id="account-info">
+        <p id="account-number">31310000907350</p>
+        <button id="copy-btn">Copy stk</button>
 </div>
 </div>
 </div>
