@@ -69,15 +69,33 @@ button:disabled {
 }
 
 #breakdown {
-    margin-top: 20px;
+    margin-top: 70px;
     padding: 30px;
-    font-size: 1rem;
+    font-size: .9rem;
     color: #333;
     background-color: #fff;
     border: 0px solid #ccc;
     border-radius: 15px;
     display: none;
     word-wrap: break-word; /* Add this line to enable word wrapping */
+    width: 30%; /* Set the width to 80% or adjust as needed */
+    margin: 20px; /* Center the box horizontally */
+}
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+.breakdown-label {
+    flex: 1; /* Take up 1 part of the available space */
+    text-align: left;
+    font-weight: bold;
+}
+
+.breakdown-value {
+    flex: 1; /* Take up 1 part of the available space */
+    text-align: right;
 }
 
 #breakdown div {
@@ -91,6 +109,7 @@ button:disabled {
 
 
 footer {
+    margin-top: 70px;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -210,10 +229,7 @@ footer {
                             <span class="breakdown-value"><b>${roomNumber}</b></span>
                         </div>
 
-                        <div class="breakdown-item">
-                            <span class="breakdown-label">Cập nhật:</span>
-                            <span class="breakdown-value"><b>${cells[15].textContent}</b></span>
-                        </div>
+                      
                         <hr class="breakdown-divider">
                         <div class="breakdown-item">
                             <span class="breakdown-label">Số điện tháng trước:</span>
@@ -243,6 +259,10 @@ footer {
                                                 <div class="breakdown-item">
                             <span class="breakdown-label">Lưu ý:</span>
                             <span class="breakdown-value"><b>${cells[13].textContent}</b></span>
+                        </div>
+                          <div class="breakdown-item">
+                            <span class="breakdown-label">Cập nhật:</span>
+                            <span class="breakdown-value"><b>${cells[15].textContent}</b></span>
                         </div>
                         
 
