@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">/* CSS styles for the page */
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css"></style>
+
+<meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">/* CSS styles for the page */
 body {
     font-family: 'Open Sans', sans-serif; /* Change to Open Sans */
     background-color: #f4f4f9;
@@ -70,15 +72,18 @@ button:disabled {
 
 #breakdown {
     margin-top: 70px;
-    padding: 30px;
-    font-size: .9rem;
+     padding-top: 20px;
+    padding-bottom: 20px;
+     padding-right: 30px;
+    padding-left: 30px;
+    font-size: 1rem;
     color: #333;
     background-color: #fff;
     border: 0px solid #ccc;
     border-radius: 15px;
     display: none;
     word-wrap: break-word; /* Add this line to enable word wrapping */
-    width: 30%; /* Set the width to 80% or adjust as needed */
+    width: 50%; /* Set the width to 80% or adjust as needed */
     margin: 20px; /* Center the box horizontally */
 }
 .breakdown-item {
@@ -141,7 +146,6 @@ footer {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MH71 | Thanh toán</title>
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
     <div class="logo" style="text-align: center; margin-top: 100px; margin-bottom: 00px;">
@@ -151,13 +155,64 @@ footer {
         <h1>Thông tin thanh toán</h1>
 
         <input type="text" id="phone-number" placeholder="Nhập sdt đã kết nối Zalo">
-        <button id="submit-btn" disabled="">Tra cứu</button>
+        <button id="submit-btn" class="">Tra cứu</button>
 
-        <div id="result"></div>
+        <div id="result">Tổng số tiền cần thanh toán</div>
 
-        <div id="total-box"></div>
+        <div id="total-box" style="display: block;">2.943.000&nbsp;₫</div>
 
-        <div id="breakdown"></div>
+        <div id="breakdown" style="display: block;">
+                                            <div class="breakdown-item">
+                            <span class="breakdown-label">Tháng:</span>
+                            <span class="breakdown-value"><b>5.2024</b></span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Người thuê:</span>
+                            <span class="breakdown-value"><b>Hải (tạp hóa)</b></span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Số phòng:</span>
+                            <span class="breakdown-value"><b>K2</b></span>
+                        </div>
+
+                      
+                        <hr class="breakdown-divider">
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Số điện tháng trước:</span>
+                            <span class="breakdown-value"><b>4,037</b></span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Số điện tháng này:</span>
+                            <span class="breakdown-value"><b>4,168</b></span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Số điện dùng:</span>
+                            <span class="breakdown-value"><b>131</b></span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Tiền điện (x3000 ₫):</span>
+                            <span class="breakdown-value"><b>393,000 ₫</b></span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Tiền phòng:</span>
+                            <span class="breakdown-value"><b>2,500,000 ₫</b></span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Tiền rác:</span>
+                            <span class="breakdown-value"><b>50,000 ₫</b></span>
+                        </div>
+                        <hr class="breakdown-divider">
+                                                <div class="breakdown-item">
+                            <span class="breakdown-label">Lưu ý:</span>
+                            <span class="breakdown-value"><b>Không</b></span>
+                        </div>
+                          <div class="breakdown-item">
+                            <span class="breakdown-label">Cập nhật:</span>
+                            <span class="breakdown-value"><b>20.05.2024 | 14:30:30</b></span>
+                        </div>
+                        
+
+                    </div>
 
         <div id="transaction-info">
             <div style="margin-top: 20px;"></div>
@@ -325,5 +380,4 @@ document.getElementById('copy-btn').addEventListener('click', () => {
     }).catch(err => {
         console.error('Không thể copy:', err);
     });
-});</script><script type="text/javascript" src="js/script.js"></script>
-</body>
+});</script><script></script></body>
