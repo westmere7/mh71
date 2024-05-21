@@ -22,7 +22,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    ///align-items: center;
     justify-content: center;
 }
 
@@ -34,7 +34,7 @@ h1 {
 }
 
 input[type="number"] {
-    width: 70%;
+    ///width: 70%;
     height: 50px;
     padding: 10px;
     font-size: 1.5rem;
@@ -50,7 +50,7 @@ input[type="number"] {
 }
 
 button {
-    width: 70%;
+    ///width: 70%;
     ///width: 300px;
     padding: 12px;
     font-size: 1rem;
@@ -62,7 +62,7 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    ///box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 button:hover {
@@ -89,7 +89,7 @@ button:disabled {
  ///font-family: 'Oswald', sans-serif;
     ///font-weight: bold;
     margin-top: 20px;
-    width: 70%;
+    ///width: 70%;
     padding: 10px 10px 10px 10px; /* Increase padding for more space */
     font-size: 3.5rem; /* Increase font size for larger text */
     font-weight: bold;
@@ -102,6 +102,7 @@ button:disabled {
 }
 
 .info-box {
+    
     ///border: 2px solid #349ca4;
     padding: 15px;
     border-radius: 10px;
@@ -112,9 +113,11 @@ button:disabled {
 
 .image-container {
     margin: 5px 0;
+    
 }
 
 .image-container img {
+    
     ///margin: 5px 5px 5px 5px;
     max-width: 100%;
     height: auto;
@@ -124,6 +127,7 @@ button:disabled {
 }
 
 .bank-details {
+    
     font-weight: bold;
     color: #349ca4;
 }
@@ -148,7 +152,8 @@ button:disabled {
 }
 
 #breakdown {
-    margin-top: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
      padding-top: 20px;
     padding-bottom: 20px;
      padding-right: 30px;
@@ -160,8 +165,8 @@ button:disabled {
     border-radius: 10px;
     display: none;
     word-wrap: break-word; /* Add this line to enable word wrapping */
-    width: 70%; /* Set the width to 80% or adjust as needed */
-    margin: 20px; /* Center the box horizontally */
+    ///width: 70%; /* Set the width to 80% or adjust as needed */
+    ///margin: 20px; /* Center the box horizontally */
 }
 .breakdown-item {
     display: flex;
@@ -241,10 +246,10 @@ footer {
 <title>MH71 | Thanh toán</title>
 </head>
 <body>
-<div class="logo" style="text-align: center; margin-top: 50px; margin-bottom: -20px;">
+<div class="logo" style="text-align: center; margin-top: 24px; margin-bottom: -20px;">
 <img src="https://i.postimg.cc/4yTC7qfz/Asset-12.png" alt="Logo" width="250">
 </div>
-<div class="content" style="text-align: center; margin-top: 00px; margin-bottom: 10px;">
+<div class="content" style="text-align: center; margin-top: 00px; margin-bottom: 10px; padding: 0 2rem;">
 <h1>Thông tin thanh toán</h1>
 <input type="number" id="phone-number" placeholder="Nhập số điện thoại">
 
@@ -253,7 +258,7 @@ footer {
 <div id="total-box"></div>
 <div id="breakdown"></div>
 <div id="transaction-info">
-<div style="margin-top: 0px;"></div>
+<div style="text-align: center; margin-top: 00px; margin-bottom: 10px; padding: 0 2rem;"></div>
 <div class="info-box">
     <div class="image-container">
         <img src="https://i.postimg.cc/2SL51L7f/QR-MAIN.png" alt="Thông tin chuyển khoản">
@@ -263,7 +268,7 @@ footer {
 </div>
 </div>
 <footer>
-V0.9 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
+V1.0 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
 </footer>
 <script src="script.js"></script>
 <script>fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
