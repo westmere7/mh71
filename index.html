@@ -192,6 +192,25 @@ button:disabled {
     text-align: right;
 }
 
+.month {
+    display: inline-block;
+    /// margin: 0 0 100px 0;
+    background-color: #FFF2F3;
+    border-radius: 100px;
+    padding: .6rem 1.3rem;
+    font-weight: bold;
+    color: #FE5177;
+    font-size: 1.2rem;
+    flex: 1; /* Take up 1 part of the available space */
+    text-align: center;
+   
+    
+}
+
+.sep_element {
+    margin: 20px 0; /* Add vertical margin of 20px (top and bottom) and no horizontal margin (right and left) */
+}
+
 #breakdown div {
     margin-bottom: 10px;
 }
@@ -247,6 +266,14 @@ footer {
         }
         
 
+    @media only screen and (max-width: 400px) {
+        #total-box {
+            font-size: 2.5rem;
+        }
+        
+    }
+
+
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -263,6 +290,9 @@ footer {
 <button id="submit-btn" disabled>Tra cứu</button>
 <div id="result"></div>
 <div id="total-box"></div>
+
+
+
 <div id="breakdown"></div>
 <div id="transaction-info" style="display:flex; justify-content: center ;background: white;  border-radius: 10px";>
 
@@ -313,10 +343,12 @@ V1.1 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
                     // Display breakdown details
                     breakdownDiv.style.display = 'block';
                     breakdownDiv.innerHTML = `
-                                            <div class="breakdown-item">
-                            <span class="breakdown-label">Tháng:</span>
-                            <span class="breakdown-value"><b>${cells[14].textContent}</b></span>
-                        </div>
+                                      <div class="month">
+    Tháng:
+    <b>${cells[14].textContent}</b>
+</div>
+<div class="sep_element">
+                                         
                         <div class="breakdown-item">
                             <span class="breakdown-label">Người thuê:</span>
                             <span class="breakdown-value"><b>${tenantName}</b></span>
