@@ -197,14 +197,46 @@ button:disabled {
 
 .month {
     display: inline-block;
+    margin-right: 1rem;
     /// margin: 0 0 100px 0;
     background-color: #EDF8FE;
     border-radius: 100px;
-    padding: .6rem 1.3rem;
+    padding: .6rem 1.9rem;
     font-weight: bold;
-    color: #0776BB
-;
-    font-size: 1.2rem;
+    color: #0776BB;
+    font-size: 1.4rem;
+    flex: 1; /* Take up 1 part of the available space */
+    text-align: center;
+   
+    }
+
+.container_monthpayment {    
+    ///max-width: 100%;
+    ///display: inline-block;
+    display:flex;
+    /// margin: 0 0 100px 0;
+    background-color: #ffffff;
+    border-radius: 0px;
+    ////padding: .6rem 1.9rem;
+    font-weight: bold;
+    color: #0776BB;
+    ///align-items: center;
+    ///justify-items: center;
+    font-size: 1.4rem;
+    ///flex: 1; /* Take up 1 part of the available space */
+    ///text-align: center;
+    
+    }
+
+.paymentstt {
+    display: inline-block;
+    /// margin: 0 0 100px 0;
+    background-color: #EBF8EA;
+    border-radius: 100px;
+    padding: .6rem 1.9rem;
+    font-weight: bold;
+    color: #168841;
+    font-size: 1.4rem;
     flex: 1; /* Take up 1 part of the available space */
     text-align: center;
    
@@ -351,11 +383,16 @@ V1.1 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
                     // Display breakdown details
                     breakdownDiv.style.display = 'block';
                     breakdownDiv.innerHTML = `
-                                      <div class="month">
-    Tháng
-    <b>${cells[14].textContent}</b>
+<div class="container_monthpayment">
+    <div class="month" style="display: inline-block;">
+        Tháng
+        <b>${cells[14].textContent}</b>
+    </div>
+    <div class="paymentstt" style="display: inline-block;">
+        
+        <b>${cells[16].textContent}</b>
+    </div>
 </div>
-<div class="sep_element">
                                          
                         <div class="breakdown-item">
                             <span class="breakdown-label">Người thuê:</span>
