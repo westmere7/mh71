@@ -195,11 +195,12 @@ button:disabled {
 .month {
     display: inline-block;
     /// margin: 0 0 100px 0;
-    background-color: #FFF2F3;
+    background-color: #EDF8FE;
     border-radius: 100px;
     padding: .6rem 1.3rem;
     font-weight: bold;
-    color: #FE5177;
+    color: #0776BB
+;
     font-size: 1.2rem;
     flex: 1; /* Take up 1 part of the available space */
     text-align: center;
@@ -207,8 +208,12 @@ button:disabled {
     
 }
 
+.breakdown-divider {
+    border: 1px solid #ECECEC; /* Change the color of the border to #FF5733 */
+}
+
 .sep_element {
-    margin: 20px 0; /* Add vertical margin of 20px (top and bottom) and no horizontal margin (right and left) */
+    margin: 0.65rem 0; /* Add vertical margin of 20px (top and bottom) and no horizontal margin (right and left) */
 }
 
 #breakdown div {
@@ -344,7 +349,7 @@ V1.1 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
                     breakdownDiv.style.display = 'block';
                     breakdownDiv.innerHTML = `
                                       <div class="month">
-    Tháng:
+    Tháng
     <b>${cells[14].textContent}</b>
 </div>
 <div class="sep_element">
