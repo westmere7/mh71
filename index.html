@@ -52,7 +52,7 @@ input[type="number"] {
 button {
     ///width: 70%;
     ///width: 300px;
-    padding: 12px;
+    padding: 1rem;
     font-size: 1rem;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
@@ -107,6 +107,8 @@ button:disabled {
     padding: 1rem 4rem;
     border-radius: 10px;
     background-color: #ffffff;
+    ///align-items: center;
+    ///justify-content: center;
     ///width: 300px;
     
 }
@@ -121,7 +123,7 @@ button:disabled {
     ///padding: 2rem;
     ///margin: 5px 5px 5px 5px;
     margin-bottom: -10px;
-    max-width: 100%;
+    max-width: 320px;
     height: auto;
     //border: 2px solid #349ca4;
     border-radius: 5px;
@@ -150,7 +152,7 @@ button:disabled {
     font-size: 1rem;
     background-color: #349ca4;
     color: #fff;
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
     border: none;
     border-radius: 7px;
     cursor: pointer;
@@ -262,18 +264,18 @@ footer {
 <div id="result"></div>
 <div id="total-box"></div>
 <div id="breakdown"></div>
-<div id="transaction-info" style="display:flex">
+<div id="transaction-info" style="display:flex; justify-content: center ;background: white;  border-radius: 10px";>
 
 <div class="info-box">
     <div class="image-container">
         <img src="https://i.postimg.cc/qvBNsNm5/QR-MAIN.png" alt="Thông tin chuyển khoản">
     </div>
-    <button id="copy-btn">Copy stk</button>
+    <button id="copy-btn">Copy số TK</button>
 </div>
 </div>
 </div>
 <footer>
-V1.0 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
+V1.1 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
 </footer>
 <script src="script.js"></script>
 <script>fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
