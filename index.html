@@ -104,26 +104,28 @@ button:disabled {
 .info-box {
     
     ///border: 2px solid #349ca4;
-    padding: 15px;
+    padding: 1rem 4rem;
     border-radius: 10px;
     background-color: #ffffff;
-    width: 300px;
+    ///width: 300px;
     
 }
 
 .image-container {
-    margin: 5px 0;
+   margin: 5px 0;
+   
     
 }
 
 .image-container img {
-    
+    ///padding: 2rem;
     ///margin: 5px 5px 5px 5px;
+    margin-bottom: -10px;
     max-width: 100%;
     height: auto;
     //border: 2px solid #349ca4;
     border-radius: 5px;
-   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    ///box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .bank-details {
@@ -143,9 +145,12 @@ button:disabled {
 }
 
 #copy-btn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
     background-color: #349ca4;
     color: #fff;
-    padding: 7px;
+    padding: 1rem 3rem;
     border: none;
     border-radius: 7px;
     cursor: pointer;
@@ -257,11 +262,11 @@ footer {
 <div id="result"></div>
 <div id="total-box"></div>
 <div id="breakdown"></div>
-<div id="transaction-info">
-<div style="text-align: center; margin-top: 00px; margin-bottom: 10px; padding: 0 2rem;"></div>
+<div id="transaction-info" style="display:flex">
+
 <div class="info-box">
     <div class="image-container">
-        <img src="https://i.postimg.cc/2SL51L7f/QR-MAIN.png" alt="Thông tin chuyển khoản">
+        <img src="https://i.postimg.cc/qvBNsNm5/QR-MAIN.png" alt="Thông tin chuyển khoản">
     </div>
     <button id="copy-btn">Copy stk</button>
 </div>
