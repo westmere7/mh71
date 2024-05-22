@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head><meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">/* CSS styles for the page */
+<head>
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<style type="text/css">/* CSS styles for the page */
 
-        @font-face {
-            font-family: 'Oswald';
-            src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-        }
+@font-face {
+    font-family: 'Oswald';
+    src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+}
 
 body {
     font-family: 'Open Sans', sans-serif; /* Change to Open Sans */
@@ -17,6 +21,11 @@ body {
     flex-direction: column;
     min-height: 00vh;
     align-items: center;
+}
+
+.paid {
+    background: #EAFDDF!important;
+    color: #067D19!important;
 }
 
 .content {
@@ -236,11 +245,11 @@ button:disabled {
 .paymentstt {
     ///display: flex;
     /// margin: 0 0 100px 0;
-    background-color: #F3EAF6;
+    background-color: #FFF1EE;
     border-radius: 100px;
     padding: .6rem 1rem;
     font-weight: bold;
-    color: #581974;
+    color: #AC290C;
     font-size: 1rem;
     flex: 1; /* Take up 1 part of the available space */
     
@@ -271,9 +280,6 @@ main {
 
 
 footer {
-   display: flex;
-   align-items: center;
-    justify-content: center;
     position: fixed; /* Fixed position to stay at the bottom */
     bottom: 0; /* Align the footer to the bottom of the viewport */
     width: 100%; /* Full width of the viewport */
@@ -285,7 +291,6 @@ footer {
     border-top: 1px solid #e0e0e0;
     z-index: 1000; /* Ensure the footer is above other content */
 }
-
 @keyframes flash {
     0% {
         background-color: #349ca4;
@@ -335,32 +340,22 @@ footer {
 <div class="content" style="text-align: center; margin-top: 00px; margin-bottom: 10px; padding: 0 2rem;">
 <h1>Thông tin thanh toán</h1>
 <input type="number" id="phone-number" placeholder="Nhập số điện thoại">
-
 <button id="submit-btn" disabled>Tra cứu</button>
 <div id="result"></div>
 <div id="total-box"></div>
-
-
-
 <div id="breakdown"></div>
-<div id="transaction-info" style="display:flex; justify-content: center ;background: white;  border-radius: 10px";>
-
+<div id="transaction-info" style="display:flex; justify-content: center ;background: white;  border-radius: 10px" ;>
 <div class="info-box">
-    <div class="image-container">
-        <img src="https://i.postimg.cc/qvBNsNm5/QR-MAIN.png" alt="Thông tin chuyển khoản">
-    </div>
-    <button id="copy-btn">Copy số TK</button>
+<div class="image-container">
+<img src="https://i.postimg.cc/qvBNsNm5/QR-MAIN.png" alt="Thông tin chuyển khoản">
+</div>
+<button id="copy-btn">Copy số TK</button>
 </div>
 </div>
 </div>
-
-
 <footer>
-    <div>
-        V1.3 | Made by D-NM-DXC, 2024 | Deployed by Netlify.
-    </div>
+V1.1 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
 </footer>
-
 <script src="script.js"></script>
 <script>fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
     .then(response => response.text())
@@ -397,16 +392,15 @@ footer {
                     // Display breakdown details
                     breakdownDiv.style.display = 'block';
                     breakdownDiv.innerHTML = `
-<div class="container_monthpayment">
-    <div class="month" style="display: inline-block;">
-        Tháng
-        <b>${cells[14].textContent}</b>
-    </div>
-    <div class="paymentstt" style="display: inline-block;">
-        
-        <b>${cells[16].textContent}</b>
-    </div>
-</div>
+                        <div class="container_monthpayment">
+                            <div class="month" style="display: inline-block;">
+                                Tháng
+                                <b>${cells[14].textContent}</b>
+                            </div>
+                            <div class="paymentstt" style="display: inline-block;">
+                                <b id="payment_text">${cells[16].textContent}</b>
+                            </div>
+                        </div>
                                          
                         <div class="breakdown-item">
                             <span class="breakdown-label">Người thuê:</span>
@@ -452,10 +446,9 @@ footer {
                             <span class="breakdown-label">Cập nhật:</span>
                             <span class="breakdown-value"><b>${cells[15].textContent}</b></span>
                         </div>
-                        
-
                     `;
                 }
+                
             });
 
             if (found) {
@@ -495,7 +488,14 @@ footer {
                 submitBtn.classList.remove('flash');
             }, { once: true });
         });
-
+        submitBtn.addEventListener('click', () => {
+            const payment_text = document.getElementById('payment_text');
+                if (payment_text.textContent === 'Chưa thanh toán') {
+                    
+                } else {
+                   payment_text.parentElement.classList.add("paid");
+                }
+        });
         // Enable the button if the phone number field contains only numbers
         phoneNumberInput.addEventListener('input', () => {
             const phoneNumberValue = phoneNumberInput.value.trim();
