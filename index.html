@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 00vh;
+    align-items: center;
 }
 
 .content {
@@ -270,6 +271,9 @@ main {
 
 
 footer {
+   display: flex;
+   align-items: center;
+    justify-content: center;
     position: fixed; /* Fixed position to stay at the bottom */
     bottom: 0; /* Align the footer to the bottom of the viewport */
     width: 100%; /* Full width of the viewport */
@@ -277,10 +281,11 @@ footer {
     font-size: 0.75rem;
     color: #999;
     text-align: center;
-    background-color: #f4f4f9;
+    background-color: #ffffff;
     border-top: 1px solid #e0e0e0;
     z-index: 1000; /* Ensure the footer is above other content */
 }
+
 @keyframes flash {
     0% {
         background-color: #349ca4;
@@ -348,9 +353,14 @@ footer {
 </div>
 </div>
 </div>
+
+
 <footer>
-V1.3 | Made by D-NM-DXC, 2024 | Deployed by Netlify.
+    <div>
+        V1.3 | Made by D-NM-DXC, 2024 | Deployed by Netlify.
+    </div>
 </footer>
+
 <script src="script.js"></script>
 <script>fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
     .then(response => response.text())
