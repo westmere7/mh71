@@ -452,6 +452,7 @@ V1.5 | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
             document.getElementById("message").style.display = "block";
             ///document.getElementById("message").style.backgroundColor = "#F2FCEF";
             ///document.getElementById("message").style.color = "beige";
+            document.getElementById("Psubmit-button").style.backgroundColor = "#ffffff";
             document.getElementById("Psubmit-button").disabled = false;
             document.getElementById("Psubmit-button").textContent = "✔ Đã xác nhận";
             ///document.getElementById("phone-number").value = "";
@@ -628,7 +629,7 @@ document.getElementById('copy-btn').addEventListener('click', () => {
         const copyBtn = document.getElementById('copy-btn');
         copyBtn.textContent = '✔ Đã copy STK';
         ///copyBtn.style.color = '#ffffff';
-        ///copyBtn.style.backgroundColor = '#349ca4'; // Change button color to green
+        copyBtn.style.backgroundColor = '#ffffff'; // Change button color to green
     }).catch(err => {
         console.error('Không thể copy:', err);
     });
