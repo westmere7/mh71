@@ -157,16 +157,42 @@ button:disabled {
 }
 
 #copy-btn {
+  width: 190px;
+  height: 50px;
+  text-align:center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    margin-right: .7rem;
+    font-size: .9rem;
     background-color: #349ca4;
     color: #fff;
-    padding: 1rem 4rem;
+    padding: 0rem 1rem;
     border: none;
     border-radius: 7px;
     cursor: pointer;
 }
+
+#Psubmit-button {
+  text-align:center;
+  width: 190px;
+  height: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    background-color: #83C36D;
+    color: #EFFFEA;
+    padding: 0rem 1rem;
+    border: none;
+    border-radius: 2-px;
+    cursor: pointer;
+}
+
+.button-container {
+  margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
 
 #breakdown {
     margin-top: 20px;
@@ -349,7 +375,28 @@ footer {
 <div class="image-container">
 <img src="https://i.postimg.cc/j5qBmGpK/QR-MAIN.png" alt="Thông tin chuyển khoản">
 </div>
-<button id="copy-btn">Copy số TK</button>
+<div class="button-container">
+    <button id="copy-btn">Copy số TK</button>
+    <button id="Psubmit-button">Đã thanh toán</button>
+    
+    </div>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin-top: -20px;
+        /// margin: 20px;
+        font-size: .9rem;
+        font-weight: bold;
+        color: #6C6C6C;
+        padding: .5rem;
+        ///background-color: beige;
+        border-radius: 4px;
+        ///background-color: #333333;"
+    >
+    
+    </div>
+</div>
 </div>
 </div>
 </div>
@@ -357,7 +404,75 @@ footer {
 V1.3 | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
 </footer>
 <script src="script.js"></script>
-<script>fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
+
+<script>
+
+  // Submit button functionality
+
+ document.getElementById("Psubmit-button").addEventListener("click", function () {
+        var phoneInput = document.getElementById("phone-number").value;
+
+        if (!phoneInput) {
+          document.getElementById("message").textContent = "Chưa nhập sdt";
+          document.getElementById("message").style.display = "block";
+          return;
+        }
+
+        document.getElementById("message").textContent = "Đang gửi thông tin...";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("Psubmit-button").disabled = true;
+
+        // Create the data to send
+        var formDataString = "Phone=" + encodeURIComponent(phoneInput) + "&TT_Status_submit=DONE";
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycbxbxUanPTfXO2RdlbX_R4Au_FKaNYDj5a0TkCsiCeOWXxGo3IwrTJ9V87rIJOSmzjE0/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response.ok) {
+              return response.json(); // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent = "Đã cập nhật thông tin"; 
+            document.getElementById("message").style.display = "block";
+            ///document.getElementById("message").style.backgroundColor = "#F2FCEF";
+            ///document.getElementById("message").style.color = "beige";
+            document.getElementById("Psubmit-button").disabled = false;
+            ///document.getElementById("phone-number").value = "";
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Handle errors, you can display an error message here
+            console.error(error);
+            document.getElementById("message").textContent = "Số dt không tồn tại hoặc sai";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("Psubmit-button").disabled = false;
+          });
+      });
+
+
+  // Main data fetch from web-published sheet.
+
+
+fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
     .then(response => response.text())
     .then(data => {
         const parser = new DOMParser();
