@@ -157,18 +157,18 @@ button:disabled {
 }
 
 #copy-btn {
+  color: #11858B; 
   width: 190px;
   height: 50px;
   text-align:center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-right: .7rem;
-    font-size: .9rem;
-    background-color: #349ca4;
-    color: #fff;
+    ///margin-top: 1rem;
+    margin: 0rem 0.7rem;
+background-color: #E6F9FA;
+    font-size: 1rem;
+    ///color: #fff;
     padding: 0rem 1rem;
-    border: none;
-    border-radius: 7px;
+    border: 2px solid #B9E9EC;
+      ///border-radius: 7px;
     cursor: pointer;
 }
 
@@ -177,19 +177,20 @@ button:disabled {
   width: 190px;
   height: 50px;
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: .9rem;
-    background-color: #83C36D;
-    color: #fff;
+    margin-bottom: 1rem; 
+    font-size: 1rem;
+    background-color: #ECFEE6;
+    color: #226F08;
     padding: 0rem 1rem;
-    border: none;
+    border: 2px solid #AEDC9F;
     border-radius: 7px;
     cursor: pointer;
 }
 
 .button-container {
-  margin: 1rem;
-    display: flex;
+  ///margin: 1rem;
+  padding: 1rem;
+    ///display: flex;
     justify-content: center;
 }
 
@@ -377,7 +378,7 @@ footer {
 </div>
 <div class="button-container">
     <button id="copy-btn">Copy số TK</button>
-    <button id="Psubmit-button">✔ Đã thanh toán</button>
+    <button id="Psubmit-button">Xác nhận T.Toán</button>
     
     </div>
     <div
@@ -417,7 +418,7 @@ V1.5 | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
           document.getElementById("message").style.display = "block";
           return;
         }
-
+        
         document.getElementById("message").textContent = "Đang gửi thông tin...";
         document.getElementById("message").style.display = "block";
         document.getElementById("Psubmit-button").disabled = true;
@@ -452,6 +453,7 @@ V1.5 | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
             ///document.getElementById("message").style.backgroundColor = "#F2FCEF";
             ///document.getElementById("message").style.color = "beige";
             document.getElementById("Psubmit-button").disabled = false;
+            document.getElementById("Psubmit-button").textContent = "✔ Đã xác nhận";
             ///document.getElementById("phone-number").value = "";
 
             setTimeout(function () {
@@ -619,13 +621,14 @@ fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXz
         });
     });
 
-// Copy account number to clipboard
+// Copy account number to clipboard 
 document.getElementById('copy-btn').addEventListener('click', () => {
     ///const accountNumber = document.getElementById('account-number').textContent;
     navigator.clipboard.writeText('31310000907350').then(() => {
         const copyBtn = document.getElementById('copy-btn');
         copyBtn.textContent = '✔ Đã copy STK';
-        copyBtn.style.backgroundColor = '#83C36D'; // Change button color to green
+        ///copyBtn.style.color = '#ffffff';
+        ///copyBtn.style.backgroundColor = '#349ca4'; // Change button color to green
     }).catch(err => {
         console.error('Không thể copy:', err);
     });
