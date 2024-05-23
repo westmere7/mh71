@@ -63,7 +63,7 @@ button {
     ///width: 70%;
     ///width: 300px;
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -180,7 +180,7 @@ button:disabled {
     margin-bottom: 1rem;
     font-size: .9rem;
     background-color: #83C36D;
-    color: #EFFFEA;
+    color: #fff;
     padding: 0rem 1rem;
     border: none;
     border-radius: 7px;
@@ -377,7 +377,7 @@ footer {
 </div>
 <div class="button-container">
     <button id="copy-btn">Copy số TK</button>
-    <button id="Psubmit-button">Đã thanh toán</button>
+    <button id="Psubmit-button">✔ Đã thanh toán</button>
     
     </div>
     <div
@@ -401,7 +401,7 @@ footer {
 </div>
 </div>
 <footer>
-V1.4a | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
+V1.5 | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
 </footer>
 <script src="script.js"></script>
 
@@ -624,8 +624,8 @@ document.getElementById('copy-btn').addEventListener('click', () => {
     ///const accountNumber = document.getElementById('account-number').textContent;
     navigator.clipboard.writeText('31310000907350').then(() => {
         const copyBtn = document.getElementById('copy-btn');
-        copyBtn.textContent = 'Đã copy STK';
-        copyBtn.style.backgroundColor = '#28a745'; // Change button color to green
+        copyBtn.textContent = '✔ Đã copy STK';
+        copyBtn.style.backgroundColor = '#83C36D'; // Change button color to green
     }).catch(err => {
         console.error('Không thể copy:', err);
     });
