@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">/* CSS styles for the page */
+<head>
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<style type="text/css">/* CSS styles for the page */
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+}
+
 body {
     font-family: 'Open Sans', sans-serif; /* Change to Open Sans */
     background-color: #f4f4f9;
@@ -10,13 +20,19 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 00vh;
+    align-items: center;
+}
+
+.paid {
+    background: #EAFDDF!important;
+    color: #067D19!important;
 }
 
 .content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    ///align-items: center;
     justify-content: center;
 }
 
@@ -27,8 +43,8 @@ h1 {
     text-align: center; /* Add this line to center the text */
 }
 
-input[type="text"] {
-    width: 300px;
+input[type="number"] {
+    ///width: 70%;
     height: 50px;
     padding: 10px;
     font-size: 1.5rem;
@@ -38,15 +54,18 @@ input[type="text"] {
 
     text-align: center;
     
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 9px;
     margin-bottom: 20px;
 }
 
 button {
-    width: 300px;
-    padding: 10px;
-    font-size: 1rem;
+    ///width: 70%;
+    ///width: 300px;
+    margin-top: -7px;
+    margin-bottom: 5px;
+    padding: 1rem;
+    font-size: 1.1rem;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -55,12 +74,12 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    ///box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 button:hover {
-    background-color: #277c84; /* Darken the color on hover */
-    transform: translateY(-2px); /* Add a subtle lift effect on hover */
+    ///background-color: #277c84; /* Darken the color on hover */
+    transform: translateY(0px); /* Add a subtle lift effect on hover */
 }
 
 button:active {
@@ -68,47 +87,135 @@ button:active {
 }
 
 button:disabled {
-    background-color: #b7b7b7;
-    cursor: not-allowed;
+    ///background-color: #b7b7b7;
+    ///cursor: not-allowed;
 }
 
 #result {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 20px;
     color: #333;
 }
 
 #total-box {
-        font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+ ///font-family: 'Oswald', sans-serif;
+    ///font-weight: bold;
     margin-top: 20px;
-    width: 50%;
-    padding: 10px; /* Increase padding for more space */
-    font-size: 3rem; /* Increase font size for larger text */
+    ///width: 70%;
+    padding: 10px 10px 10px 10px; /* Increase padding for more space */
+    font-size: 3.5rem; /* Increase font size for larger text */
     font-weight: bold;
-    
-    //border: 10px solid #349ca4;
-    color: #ffffff;
-    background-color: #349ca4;
+     text-align: center;
+    //border: 4px solid #c1dee0;
+    color: #000000;
+    background-color: #ffffff;
     border-radius: 10px; /* Round the corners of the box */
     display: none;
 }
 
+.info-box {
+    
+    ///border: 2px solid #349ca4;
+    padding: .6rem .2rem;
+    border-radius: 15px;
+    background-color: #ffffff;
+    ///align-items: center;
+    ///justify-content: center;
+    ///width: 300px;
+    
+}
+
+.image-container {
+   margin: 5px 0;
+   
+    
+}
+
+.image-container img {
+    ///padding: 2rem;
+    ///margin: 5px 5px 5px 5px;
+    margin-bottom: -10px;
+    max-width: 75%;
+    height: auto;
+    //border: 2px solid #349ca4;
+    border-radius: px;
+    ///box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.bank-details {
+    
+    font-weight: bold;
+    color: #349ca4;
+}
+
+.account-holder {
+    font-style: italic;
+    color: #349ca4;
+}
+
+#account-number {
+    font-size: 16px;
+    color: #349ca4;
+}
+
+#copy-btn {
+  color: #11858B; 
+  width: 190px;
+  height: 50px;
+  text-align:center;
+    ///margin-top: 1rem;
+    ///margin: 0rem 0.7rem;
+background-color: #E6F9FA;
+    font-size: 1rem;
+    ///color: #fff;
+    padding: 0rem 1rem;
+    border: 2px solid #B9E9EC;
+      ///border-radius: 7px;
+    cursor: pointer;
+}
+
+#Psubmit-button {
+  text-align:center;
+  width: 190px;
+  height: 50px;
+    margin-top: .5rem;
+    margin-bottom: 1rem; 
+    font-size: 1rem;
+    background-color: #ECFEE6;
+    color: #226F08;
+    padding: 0rem 1rem;
+    border: 2px solid #AEDC9F;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.button-container {
+  
+  align-items: center;
+  ///margin: 0rem;
+  padding: 1rem 2rem;
+///display: flex;
+    justify-content: center;
+   
+}
+
+
 #breakdown {
-    margin-top: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
      padding-top: 20px;
     padding-bottom: 20px;
      padding-right: 30px;
     padding-left: 30px;
-    font-size: .85rem;
+    font-size: 1rem;
     color: #333;
     background-color: #fff;
     border: 0px solid #ccc;
     border-radius: 10px;
     display: none;
     word-wrap: break-word; /* Add this line to enable word wrapping */
-    width: 50%; /* Set the width to 80% or adjust as needed */
-    margin: 20px; /* Center the box horizontally */
+    ///width: 70%; /* Set the width to 80% or adjust as needed */
+    ///margin: 20px; /* Center the box horizontally */
 }
 .breakdown-item {
     display: flex;
@@ -117,14 +224,77 @@ button:disabled {
 }
 
 .breakdown-label {
+    color: #6C6C6C;
+    font-size: 0.9rem;
     flex: 1; /* Take up 1 part of the available space */
     text-align: left;
-    font-weight: bold;
+    font-weight: regular;
 }
 
 .breakdown-value {
+    font-size: 1rem;
     flex: 1; /* Take up 1 part of the available space */
     text-align: right;
+}
+
+
+
+.container_monthpayment {    
+    ///max-width: 100%;
+    ///display: inline-block;
+    display:flex;
+    /// margin: 0 0 100px 0;
+    background-color: #ffffff;
+    border-radius: 0px;
+    ////padding: .6rem 1.9rem;
+    font-weight: bold;
+    color: #0776BB;
+    ///align-items: center;
+    ///justify-items: center;
+    ///font-size: 1rem;
+    ///flex: 1; /* Take up 1 part of the available space */
+    ///text-align: center;
+    
+    }
+
+.month {
+    ///display: flex;
+    ///justify-content: center;
+    margin-right: 1rem;
+    /// margin: 0 0 100px 0;
+    background-color: #EDF8FE;
+    border-radius: 100px;
+    padding: .6rem 1rem;
+    font-weight: bold;
+    color: #0776BB;
+    font-size: 1rem;
+    flex: 1; /* Take up 1 part of the available space */
+    vertical-align: middle;
+    text-align: center;
+   
+    }  
+
+.paymentstt {
+    ///display: flex;
+    /// margin: 0 0 100px 0;
+    background-color: #FFF1EE;
+    border-radius: 100px;
+    padding: .6rem 1rem;
+    font-weight: bold;
+    color: #AC290C;
+    font-size: 1rem;
+    flex: 1; /* Take up 1 part of the available space */
+    
+   
+    
+}
+
+.breakdown-divider {
+    border: 1px solid #ECECEC; /* Change the color of the border to #FF5733 */
+}
+
+.sep_element {
+    margin: 0.65rem 0; /* Add vertical margin of 20px (top and bottom) and no horizontal margin (right and left) */
 }
 
 #breakdown div {
@@ -149,7 +319,7 @@ footer {
     font-size: 0.75rem;
     color: #999;
     text-align: center;
-    background-color: #f4f4f9;
+    background-color: #F0F0F6;
     border-top: 1px solid #e0e0e0;
     z-index: 1000; /* Ensure the footer is above other content */
 }
@@ -174,12 +344,21 @@ footer {
             
         //font-family: 'Open Sans', sans-serif;
        // font-weight: bold;
-        font-size: 1rem; /* Set the font size of the placeholder text */
+        font-size: 1.3rem; /* Set the font size of the placeholder text */
         padding: 10px;
         color: #999; /* Set the color of the placeholder text */
         //font-family: 'Open Sans', sans-serif;
         //font-weight: regular;
         }
+        
+
+    @media only screen and (max-width: 400px) {
+        #total-box {
+            font-size: 2.5rem;
+        }
+        
+    }
+
 
 </style>
 <meta charset="UTF-8">
@@ -187,32 +366,122 @@ footer {
 <title>MH71 | Thanh toán</title>
 </head>
 <body>
-<div class="logo" style="text-align: center; margin-top: 100px; margin-bottom: 00px;">
-<img src="https://i.postimg.cc/4yTC7qfz/Asset-12.png" alt="Logo" width="300">
+<div class="logo" style="text-align: center; margin-top: 24px; margin-bottom: -20px;">
+<img src="https://i.postimg.cc/4yTC7qfz/Asset-12.png" alt="Logo" width="190">
 </div>
-<div class="content" style="text-align: center; margin-top: 00px; margin-bottom: 10px;">
+<div class="content" style="text-align: center; margin-top: 00px; margin-bottom: 10px; padding: 0 2rem;">
 <h1>Thông tin thanh toán</h1>
-<input type="text" id="phone-number" placeholder="Nhập sdt đã kết nối Zalo">
+<input type="number" id="phone-number" placeholder="Nhập số điện thoại"> 
 <button id="submit-btn" disabled>Tra cứu</button>
 <div id="result"></div>
 <div id="total-box"></div>
 <div id="breakdown"></div>
-<div id="transaction-info">
-<div style="margin-top: 20px;"></div>
-<h2>Thông tin chuyển khoản</h2>
-<p>Ngân hàng BIDV CHI NHÁNH BẮC SÀI GÒN</p>
-<p>NGUYEN BAC KINH</p>
-<div id="account-info">
-<p id="account-number">31310000907350</p>
-<button id="copy-btn">Copy stk</button>
+<div id="transaction-info" style="display:flex; justify-content: center ;background: white;  border-radius: 10px" ;>
+<div class="info-box">
+<div class="image-container">
+<img src="https://i.postimg.cc/j5qBmGpK/QR-MAIN.png" alt="Thông tin chuyển khoản">
+</div>
+<div class="button-container">
+    <button id="copy-btn">Copy số TK</button>
+    <button id="Psubmit-button">Xác nhận T.Toán</button>
+    
+    </div>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin-top: -20px;
+        /// margin: 20px;
+        font-size: .9rem;
+        font-weight: bold;
+        color: #6C6C6C;
+        padding: .5rem;
+        ///background-color: beige;
+        border-radius: 4px;
+        ///background-color: #333333;"
+    >
+    
+    </div>
+</div>
 </div>
 </div>
 </div>
 <footer>
-V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
+V1.7 | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
 </footer>
 <script src="script.js"></script>
-<script>fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
+
+<script>
+
+  // Submit button functionality
+
+ document.getElementById("Psubmit-button").addEventListener("click", function () {
+        var phoneInput = document.getElementById("phone-number").value;
+
+        if (!phoneInput) {
+          document.getElementById("message").textContent = "Chưa nhập sdt";
+          document.getElementById("message").style.display = "block";
+          return;
+        }
+        
+        document.getElementById("message").textContent = "Đang gửi thông tin...";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("Psubmit-button").disabled = true;
+
+        // Create the data to send
+        var formDataString = "Phone=" + encodeURIComponent(phoneInput) + "&TT_Status_submit=DONE";
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycbxbxUanPTfXO2RdlbX_R4Au_FKaNYDj5a0TkCsiCeOWXxGo3IwrTJ9V87rIJOSmzjE0/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response.ok) {
+              return response.json(); // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent = "Đã cập nhật thông tin"; 
+            document.getElementById("message").style.display = "block";
+            ///document.getElementById("message").style.backgroundColor = "#F2FCEF";
+            ///document.getElementById("message").style.color = "beige";
+            document.getElementById("Psubmit-button").style.backgroundColor = "#ffffff";
+            
+            document.getElementById("Psubmit-button").textContent = "✔ Đã xác nhận";
+            ///document.getElementById("Psubmit-button").disabled = false;
+            ///document.getElementById("phone-number").value = "";
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Handle errors, you can display an error message here
+            console.error(error);
+            document.getElementById("message").textContent = "Số dt không tồn tại hoặc sai";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("Psubmit-button").disabled = false;
+          });
+      });
+
+
+  // Main data fetch from web-published sheet.
+
+
+fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXzkCJr2AiRwiZNtf3i0g7Frp3NsOwAjOcma--HupkdlGrKiu1guF3OZIJ0r0/pubhtml?gid=70362248&single=true')
     .then(response => response.text())
     .then(data => {
         const parser = new DOMParser();
@@ -247,10 +516,16 @@ V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
                     // Display breakdown details
                     breakdownDiv.style.display = 'block';
                     breakdownDiv.innerHTML = `
-                                            <div class="breakdown-item">
-                            <span class="breakdown-label">Tháng:</span>
-                            <span class="breakdown-value"><b>${cells[14].textContent}</b></span>
+                        <div class="container_monthpayment">
+                            <div class="month" style="display: inline-block;">
+                                Tháng
+                                <b>${cells[14].textContent}</b>
+                            </div>
+                            <div class="paymentstt" style="display: inline-block;">
+                                <b id="payment_text">${cells[16].textContent}</b>
+                            </div>
                         </div>
+                                         
                         <div class="breakdown-item">
                             <span class="breakdown-label">Người thuê:</span>
                             <span class="breakdown-value"><b>${tenantName}</b></span>
@@ -295,10 +570,9 @@ V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
                             <span class="breakdown-label">Cập nhật:</span>
                             <span class="breakdown-value"><b>${cells[15].textContent}</b></span>
                         </div>
-                        
-
                     `;
                 }
+                
             });
 
             if (found) {
@@ -320,7 +594,8 @@ V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
 
                 countTotal(0, total, 1000);
             } else {
-                resultDiv.innerHTML = '<strong>Không tìm thấy thông tin</strong>';
+               resultDiv.innerHTML = '<strong style="color: red;">Không tìm thấy thông tin</strong>';
+
                 totalBox.textContent = '';
                 totalBox.style.display = 'none';
                 breakdownDiv.innerHTML = `
@@ -337,7 +612,14 @@ V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
                 submitBtn.classList.remove('flash');
             }, { once: true });
         });
-
+        submitBtn.addEventListener('click', () => {
+            const payment_text = document.getElementById('payment_text');
+                if (payment_text.textContent === 'Chưa thanh toán') {
+                    
+                } else {
+                   payment_text.parentElement.classList.add("paid");
+                }
+        });
         // Enable the button if the phone number field contains only numbers
         phoneNumberInput.addEventListener('input', () => {
             const phoneNumberValue = phoneNumberInput.value.trim();
@@ -346,13 +628,14 @@ V0.7 | Bản quyền thuộc về NTD, 2024 | Deployed by Netlify.
         });
     });
 
-// Copy account number to clipboard
+// Copy account number to clipboard 
 document.getElementById('copy-btn').addEventListener('click', () => {
-    const accountNumber = document.getElementById('account-number').textContent;
-    navigator.clipboard.writeText(accountNumber).then(() => {
+    ///const accountNumber = document.getElementById('account-number').textContent;
+    navigator.clipboard.writeText('31310000907350').then(() => {
         const copyBtn = document.getElementById('copy-btn');
-        copyBtn.textContent = 'Đã copy STK';
-        copyBtn.style.backgroundColor = '#28a745'; // Change button color to green
+        copyBtn.textContent = '✔ Đã copy STK';
+        ///copyBtn.style.color = '#ffffff';
+        copyBtn.style.backgroundColor = '#ffffff'; // Change button color to green
     }).catch(err => {
         console.error('Không thể copy:', err);
     });
