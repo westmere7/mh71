@@ -382,7 +382,7 @@ footer {
 <div class="content" style="text-align: center; margin-top: 00px; margin-bottom: 10px; padding: 0 2rem;">
 <h1>Thông tin thanh toán</h1>
 <input type="number" id="phone-number" placeholder="Nhập số điện thoại"> 
-<button id="submit-btn" disabled>Tra cứu</button>
+<button id="submit-btn">Tra cứu</button>
 <div id="result"></div>
 <div id="total-box"></div>
 <div id="breakdown"></div>
@@ -417,7 +417,7 @@ footer {
 </div>
 </div>
 <footer>
-V1.7 | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
+V1.8 | Made by 7-NS-DXC, 2024 | Deployed by Netlify.
 </footer>
 <script src="script.js"></script>
 
@@ -634,7 +634,7 @@ fetch('https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQcb0QGpzWkW2JV8sZbXz
         phoneNumberInput.addEventListener('input', () => {
             const phoneNumberValue = phoneNumberInput.value.trim();
             const isNumeric = /^\d+$/.test(phoneNumberValue);
-            submitBtn.disabled = !isNumeric;
+            submitBtn.disabled = !isNumeric; 
         });
     });
 
